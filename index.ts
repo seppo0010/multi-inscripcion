@@ -2,6 +2,8 @@ import * as fs from 'fs';
 import { sequence } from 'ramda';
 import { parse } from 'csv-parse';
 import cliProgress from 'cli-progress';
+import * as ics from 'ics';
+import { datetime, RRule } from 'rrule'
 
 const cartesianProduct = sequence(Array.of)
 
@@ -109,6 +111,39 @@ function parseCursada(row: any, d: string, t: string, location: ClaseLocation) {
     }));
 }
 
+function getLocation(l: ClaseLocation): string {
+    if (l === ClaseLocation.Derecho) return 'Derecho';
+    if (l === ClaseLocation.Economicas) return 'Económicas';
+    if (l === ClaseLocation.Remoto) return 'Remoto';
+    return 'Ubicación desconocida'
+}
+
+function createCalendarForOption(materias: MateriaOpcion[], callback: (value: string) => void) {
+    const events = materias.flatMap((m: MateriaOpcion) => m.cursada.map((c: Clase) => ({
+      start: [2024, 3, 4 + c.dow as number, Math.floor(c.startHour), (c.startHour - Math.floor(c.startHour)) * 60] as [number, number, number, number, number],
+      end: [2024, 3, 4 + c.dow as number, Math.floor(c.endHour), (c.endHour - Math.floor(c.endHour)) * 60] as [number, number, number, number, number],
+      title: `${m.id} (${getLocation(c.location)})`,
+      description: '',
+      status: 'CONFIRMED' as 'CONFIRMED',
+      busyStatus: 'BUSY' as 'BUSY',
+      recurrenceRule: new RRule({
+        freq: RRule.WEEKLY,
+        interval: 1,
+        wkst: c.dow as number,
+        byweekday: c.dow as number,
+        dtstart: datetime(2024, 3, 4 + c.dow as number, Math.floor(c.startHour), (c.startHour - Math.floor(c.startHour)) * 60),
+        count: 17,
+      }).toText(),
+    })));
+
+    ics.createEvents(events, (error, value: string) => {
+        if (error) {
+            throw error;
+        }
+        callback(value);
+    });
+}
+
 const parser = parse({delimiter: ',', columns: true}, function(err, data) {
     if (err) {
         throw err;
@@ -131,7 +166,8 @@ const parser = parse({delimiter: ',', columns: true}, function(err, data) {
     })
 
     console.log('Processing options...')
-    const options = cartesianProduct(Object.values(grupos).map((g) => g.opciones));
+    // const options = cartesianProduct(Object.values(grupos).map((g) => g.opciones));
+    const options = cartesianProduct(Object.values(grupos).map((g) => g.opciones.slice(0, 3)));
     const bar1 = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic);
     bar1.start(options.length, 0);
     const optionsUtility = options.map((o: MateriaOpcion[], index: number) => {
@@ -140,7 +176,8 @@ const parser = parse({delimiter: ',', columns: true}, function(err, data) {
     });
     bar1.stop();
     const max = optionsUtility.reduce((val: number, val2: number) => Math.max(val, val2), -Infinity);
-    console.log({max, best: JSON.stringify(options[optionsUtility.indexOf(max)])})
+    const best = options[optionsUtility.indexOf(max)];
+    createCalendarForOption(best, (result) => console.log(result))
 });
 const inputFile = 'oferta.csv';
 fs.createReadStream(inputFile).pipe(parser);
