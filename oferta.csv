@@ -1,0 +1,156 @@
+Materia,Docente,Días economicas,Horario economicas,Días online,Horario online,Días derecho,Horario derecho,Puntaje,Grupo
+Micro II,Pascuini,Ma/Vi/Sa,9 a 11,,,,,10,1
+Micro II,Aromi,Lu/Mi/Ju,11 a 13,,,,,6,1
+Micro II,Ruiz,Lu/Mi,13 a 15,Ju,13 a 15,,,6,1
+Micro II,Gerschenfeld,Lu/Mi/Ju,17 a 19,,,,,8.5,0
+Micro II,Ojeda,Lu/Mi/Ju,17 a 19,,,,,6,0
+Micro II,Acosta,Lu/Mi/Ju,19 a 21,,,,,7.5,0
+Macro II,Heymann,Lu/Mi/Ju,9 a 11,,,,,9.17,1
+Macro II,Libman,Lu/Mi,7 a 9,Ju,7 a 9,,,7,1
+Macro II,Rapetti,Ma/Vi,11 a 13,Sa,11 a 13,,,9.5,1
+Macro II,Mira,Ma/Vi,17 a 19,Sa,9 a 11,,,7,0
+Macro II,Pierri,Lu/Ju,19 a 21,Mi,19 a 21,,,9,0
+EEA,Kulfas,Lu,9 a 11,,,,,9.5,2
+EEA,Coatz,Vi,17 a 19,,,,,5.16,2
+EEA,Español,Mi,19 a 21,,,,,9.125,2
+ESA,Vazquez,Mi,9 a 11,,,,,7,2
+ESA,Kennedy,Ma,11 a 13,,,,,4,2
+ESA,Fernandez,Vi,11 a 13,,,,,8.5,2
+ESA,Gonzalez,Ju,17 a 19,,,,,6,2
+ESA,Nieto,Mi,17 a 19,,,,,7,2
+HPE,Carrino,Ju,7 a 9,Lu,7 a 9,,,6,3
+HPE,Haberfeld,Ma/Vi,9 a 11,,,,,6,3
+HPE,Romero,Lu/Ju,17 a 19,,,,,9.25,0
+HPE,Pascuzzo,Ma/Vi,17 a 19,,,,,6,0
+HPE,Calderon,Ma,19 a 21,Vi,19 a 21,,,8.5,3
+HPE,Ramal,Ma/Vi,17 a 19,,,,,6,0
+Finanzas Públicas,Rotsztein,Lu/Ju,9 a 11,,,,,9.25,3
+Finanzas Públicas,Costa,Lu/Ju,9 a 11,,,,,6.5,3
+Finanzas Públicas,Cetrangolo,Ma/Vi,9 a 11,,,,,8,3
+Finanzas Públicas,Borenstein,Lu/Ju,17 a 19,,,,,4.33,0
+Finanzas Públicas,Curcio,Ma,17 a 19,Vi,17 a 19,,,5.75,0
+Finanzas Públicas,Rossignolo,Ma,19 a 21,Vi,19 a 21,,,6,3
+Laboral,CAUBET-BAMONDI,,,Lu/Ju,14 a 15.5,,,6,4
+Laboral,CAUBET-BAMONDI,,,Lu/Ju,15.5 a 17,,,6,4
+Laboral,CAUBET-GAMBACORTA,,,,,Mi,10 a 13,8,4
+Laboral,CAUBET-GAMBACORTA,,,,,Mi,14 a 17,8,4
+Laboral,CAUBET-NAGATA,,,Lu/Ju,20 a 21.5,,,7,4
+Laboral,CAUBET-NAGATA,,,Lu/Ju,20 a 21.5,,,7,4
+Laboral,GIANIBELLI,,,,,Ma/Vi,17 a 18.5,6,4
+Laboral,GIANIBELLI-PINTO V.S.,,,,,Ma/Vi,15.5 a 17,8,4
+Laboral,GIANIBELLI-PINTO V.S.,,,,,Ma/Vi,17 a 18.5,8,4
+Laboral,GIANIBELLI-SALPETER,,,,,Mi,20 a 23,7,4
+Laboral,GIANIBELLI-SUDERA A.,,,,,Lu/Ju,15.5 a 17,7,4
+Laboral,GIANIBELLI-TOSCA DIEGO,,,,,Ma/Vi,8.5 a 10,8,4
+Laboral,GIANIBELLI-TOSCA DIEGO,,,,,Ma/Vi,10 a 11.5,8,4
+Laboral,LITTERIO-DIAZ ALOY,,,,,Lu/Ju,20 a 21.5,7,4
+Laboral,LITTERIO-DIAZ ALOY,,,,,Lu/Ju,20 a 21.5,7,4
+Laboral,LITTERIO-VIRGILI C.,,,,,Lu/Ju,8.5 a 10,6,4
+Laboral,MAZA-MANAUTA,,,,,Lu/Ju,7 a 8.5,6,4
+Laboral,MAZA-MANAUTA,,,Lu/Ju,14 a 15.5,,,6,4
+Laboral,MAZA-PEREIRA,,,,,Ma/Vi,17 a 18.5,6.5,4
+Laboral,MAZA-PEREIRA,,,,,Ma/Vi,18.5 a 20,6.5,4
+Laboral,MAZA-URRETAVIZCAYA,,,,,Lu/Ju,21.5 a 23,6.5,4
+Laboral,MAZA-URRETAVIZCAYA,,,,,Ma/Vi,18.5 a 20,6.5,0
+Laboral,MUGNOLO-CAPARROS LUCAS JOSE,,,,,Lu/Ju,18.5 a 20,8,0
+Laboral,MUGNOLO-GUISADO,,,,,Lu/Ju,15.5 a 17,7,4
+Laboral,MUGNOLO-MONSALVO,,,,,Lu/Ju,17 a 18.5,7,4
+Laboral,MUGNOLO-MONSALVO,,,,,Mi,14 a 17,7,4
+Laboral,MUGNOLO-RAGUSA,,,,,Ma/Vi,15.5 a 17,9,4
+Laboral,MUGNOLO-RODRIGUEZ H.,,,,,Ma/Vi,20 a 21.5,7,4
+Laboral,MUGNOLO-ZEBALLOS MARIANO,,,,,Ma/Vi,18.5 a 20,10,0
+Laboral,TOPET-COPANI,,,Lu/Ju,21.5 a 23,,,8,4
+Laboral,TOPET-DANZI J.,,,Ma/Vi,8.5 a 10,,,8.5,4
+Laboral,TOPET-REYBET C.,,,,,Lu/Ju,20 a 21.5,9,4
+Laboral,TOPET-REYBET C.,,,Ma/Vi,15.5 a 17,,,9,4
+Sociedades,CHOMER-BIANCHI,,,,,Lu/Ju,15.5 a 17,8,5
+Sociedades,CHOMER-BIANCHI ALEJANDRA,,,,,Lu/Ju,18.5 a 20,8,0
+Sociedades,CHOMER-ETCHEVERRY B.,,,,,Ma/Vi,20 a 21.5,9,5
+Sociedades,CHOMER-SICOLI,,,,,Ma/Vi,14 a 15.5,7.5,5
+Sociedades,FAVIER D-ARALDI,,,Ma/Vi,10 a 11.5,,,8,5
+Sociedades,FAVIER D-LUCHINSKY,,,,,Ma/Vi,17 a 18.5,8,5
+Sociedades,FAVIER D-ROSSI H.,,,,,Ma/Vi,15.5 a 17,7,5
+Sociedades,FRICK-CASTROGIOVA,,,,,Lu/Ju,17 a 18.5,9,5
+Sociedades,FRICK-FALASCA,,,,,Lu/Ju,20 a 21.5,5,5
+Sociedades,GEBHARDT-GÜERRI,,,,,Mi,17 a 20,6,5
+Sociedades,GEBHARDT-LLORENTE S.,,,,,Ma/Vi,20 a 21.5,2,0
+Sociedades,GEBHARDT-MARTINEZ C.,,,,,Mi,20 a 23,7,5
+Sociedades,GEBHARDT-ROMERO,,,,,Lu/Ju,18.5 a 20,1,0
+Sociedades,GENOVESI-CORTESE MARTIN,,,,,Lu/Ju,18.5 a 20,7,0
+Sociedades,GENOVESI-CRESPO PEDRO,,,,,Ma/Vi,17 a 18.5,9,5
+Sociedades,GENOVESI-DALESSANDRO,,,,,Ma/Vi,15.5 a 17,7,5
+Sociedades,GENOVESI-GUZMAN A.,,,,,Lu/Ju,20 a 21.5,2,0
+Sociedades,GENOVESI-HANSEN,,,,,Ma/Vi,18.5 a 20,10,0
+Sociedades,GENOVESI-SANCHEZ C.,,,,,Ma/Vi,14 a 15.5,7,5
+Sociedades,MIZRAJI-TOMEO,,,,,Ma/Vi,10 a 11.5,8,5
+Sociedades,MIZRAJI-TOMEO,,,,,Ma/Vi,17 a 18.5,8,5
+Sociedades,MIZRAJI-VERLY,,,,,Lu/Ju,18.5 a 20,2,0
+Sociedades,MIZRAJI-VERLY,,,,,Lu/Ju,20 a 21.5,2,0
+Sociedades,NISSEN-ALLENDE,,,,,Ma/Vi,08.5 a 10,6,5
+Sociedades,NISSEN-BOQUIN,,,,,Lu/Ju,11.5 a 13,6,5
+Sociedades,NISSEN-BOQUIN,,,,,Lu/Ju,15.5 a 17,6,5
+Sociedades,NISSEN-CULTRARO G.,,,Lu/Ju,21.5 a 23,,,5,5
+Sociedades,PAOLANTONIO-LEGON,,,,,Lu/Ju,15.5 a 17,6,5
+Sociedades,PIEDECASAS-A DESIGNAR,,,,,Lu/Ju,21.5 a 23,6,5
+Sociedades,PIEDECASAS-A DESIGNAR,,,,,Mi,18.5 a 21.5,6,5
+Sociedades,PIEDECASAS-AUFIERO ANA,,,Lu/Ju,14 a 15.5,,,4,5
+Sociedades,PIEDECASAS-AUFIERO ANA,,,Lu/Ju,20 a 21.5,,,4,5
+Sociedades,PISANI-A DESIGNAR,,,,,Lu/Ju,08.5 a 10,5,5
+Sociedades,PISANI-COSENTINO J.,,,,,Ma/Vi,17 a 18.5,7,5
+Sociedades,PISANI-FERRO,,,,,Lu/Ju,17 a 18.5,8,5
+Sociedades,PISANI-GARCIA V.J.,,,Lu/Ju,14 a 15.5,,,7,5
+Sociedades,ROVIRA-LOPEZ TILLI A,,,Ma/Vi,13 a 14.5,,,2,0
+Sociedades,ROVIRA-LOPEZ TILLI A,,,,,Ma/Vi,15.5 a 17,2,0
+Sociedades,ROVIRA-LUCHINSKY,,,Lu/Ju,08.5 a 10,,,4,5
+Sociedades,VITOLO-JURADO,,,,,Lu/Ju,08.5 a 10,9,5
+Sociedades,VITOLO-ODRIOZOLA,,,,,Lu/Ju,08.5 a 10,6,5
+Sociedades,VITOLO-PELAEZ,,,,,Lu/Ju,10 a 11.5,5,5
+Sociedades,VITOLO-STORDEUR,,,,,Lu/Ju,18.5 a 20,1,0
+Familia,ARIANNA-CARDENAS,,,Mi,10 a 11.5,Lu/Ju,10 a 11.5,9,6
+Familia,ARIANNA-DEL ARBOL M.,,,Mi,15.5 a 17,Lu/Ju,15.5 a 17,4,6
+Familia,ARIANNA-GRAHAM,,,Mi,17 a 18.5,Lu/Ju,17 a 18.5,4,6
+Familia,ARIANNA-HERRERA,,,Mi,07 a 08.5,Ma/Vi,07 a 08.5,3,6
+Familia,BERBERE-APEZECHEA,,,Mi,11.5 a 13,Lu/Ju,11.5 a 13,6,6
+Familia,BERBERE-BASSET U.,,,Mi,08.5 a 10,Ma/Vi,08.5 a 10,6,6
+Familia,BERBERE-BASSET U.,,,Ma/Mi/Vi,15.5 a 17,,,6,6
+Familia,BERBERE-BERBERE,,,Mi,18.5 a 20,Lu/Ju,18.5 a 20,6,0
+Familia,BERBERE-IGNACIO G.,,,Mi,07 a 08.5,Lu/Ju,07 a 08.5,7,6
+Familia,BERBERE-MERLO,,,Mi,10 a 11.5,Ma/Vi,10 a 11.5,4,6
+Familia,BERBERE-MILLAN F.,,,Lu/Mi/Ju,08.5 a 10,,,7,6
+Familia,BERBERE-VAZQUEZ,,,Ma/Mi/Vi,20 a 21.5,,,1,0
+Familia,CORDOBA-CALLEGARI,,,Mi,15.5 a 17,Lu/Ju,15.5 a 17,10,6
+Familia,CORDOBA-DURRIEU B.,,,Mi,10 a 11.5,Lu/Ju,10 a 11.5,10,6
+Familia,CORDOBA-SIDERIO,,,Mi,17 a 18.5,Lu/Ju,17 a 18.5,10,6
+Familia,CORDOBA-VANELLA,,,Ma/Mi/Vi,20 a 21.5,,,1,0
+Familia,HERNANDEZ-FAMA MARIA V.,,,Mi,17 a 18.5,Lu/Ju,17 a 18.5,10,6
+Familia,HERNANDEZ-FERNANDEZ,,,Mi,18.5 a 20,Lu/Ju,18.5 a 20,10,0
+Familia,HERNANDEZ-MAINARD,,,Mi,17 a 18.5,Ma/Vi,17 a 18.5,7,6
+Familia,HERNANDEZ-SILVA,,,Mi,15.5 a 17,Lu/Ju,15.5 a 17,9,6
+Familia,MEDINA-CERRA,,,Lu/Mi/Ju,17 a 18.5,,,8,6
+Familia,MEDINA-ROLLERI G.,,,Mi,18.5 a 20,Lu/Ju,18.5 a 20,7,0
+Familia,MEDINA-ROVEDA,,,Mi,18.5 a 20,Ma/Vi,18.5 a 20,1,0
+Familia,MEDINA-SANTISO,,,Mi,20 a 21.5,Ma/Vi,20 a 21.5,9,6
+Familia,MEDINA-SANTISO,,,Ma/Mi/Vi,20 a 21.5,,,9,6
+Familia,MEDINA-SEDA JUAN,,,Mi,17 a 18.5,Ma/Vi,17 a 18.5,1,0
+Familia,PITRAU-BURGOS,,,Mi,14 a 15.5,Lu/Ju,14 a 15.5,4,6
+Familia,PITRAU-CORDOBA L.,,,Mi,14 a 15.5,Ma/Vi,14 a 15.5,4,6
+Familia,PITRAU-GANGI W.,,,Mi,08.5 a 10,Ma/Vi,08.5 a 10,5,6
+Familia,PITRAU-KANEFSCK,,,Mi,14 a 15.5,Ma/Vi,14 a 15.5,5,6
+Familia,PITRAU-SALMASO,,,Mi,18.5 a 20,Lu/Ju,18.5 a 20,5,0
+Familia,PITRAU-VEGA,,,Mi,20 a 21.5,Ma/Vi,20 a 21.5,1,0
+Familia,SOLARI NESTOR,,,Mi,10 a 11.5,Lu/Ju,10 a 11.5,8,6
+Familia,SOLARI NESTOR,,,Lu/Mi/Ju,11.5 a 13,,,8,6
+Familia,SOLARI-DUZDEVICH C.,,,Mi,15.5 a 17,Lu/Ju,15.5 a 17,6,6
+Familia,SOLARI-DUZDEVICH C.,,,Mi,17 a 18.5,Lu/Ju,17 a 18.5,6,6
+Familia,SOLARI-MAYOR PAULA,,,Mi,15.5 a 17,Ma/Vi,15.5 a 17,6,6
+Familia,SOLARI-MAYOR PAULA,,,Mi,17 a 18.5,Ma/Vi,17 a 18.5,6,6
+Familia,SOLARI-MONTALTO A.,,,Ma/Mi/Vi,10 a 11.5,,,8,6
+Familia,SOLARI-MONTALTO A.,,,Ma/Mi/Vi,11.5 a 13,,,8,6
+Familia,UGARTE-ALBHORI TELIAS,,,Mi,17 a 18.5,Lu/Ju,17 a 18.5,3,6
+Familia,UGARTE-CICARELLI,,,Lu/Mi/Ju,20 a 21.5,,,1,0
+Familia,UGARTE-SCHERMAN IDA,,,Mi,17 a 18.5,Ma/Vi,17 a 18.5,3,6
+Familia,UGARTE-SOJO,,,Mi,20 a 21.5,Lu/Ju,20 a 21.5,7,6
+Familia,WAGMAISTER ADRIANA,,,Ma/Mi/Vi,14 a 15.5,,,6,6
+Familia,WAGMAISTER ADRIANA,,,Ma/Mi/Vi,15.5 a 17,,,6,6
+Familia,WAGMAISTER-BEDROSSIAN,,,Mi,10 a 11.5,Ma/Vi,10 a 11.5,8,6
+Familia,WAGMAISTER-PODESTA A,,,Mi,08.5 a 10,Lu/Ju,08.5 a 10,9,6
