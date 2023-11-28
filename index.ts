@@ -138,6 +138,7 @@ const parser = parse({delimiter: ',', columns: true}, function(err, data) {
         bar1.update(index);
         return utilidad(o);
     });
+    bar1.stop();
     const max = optionsUtility.reduce((val: number, val2: number) => Math.max(val, val2), -Infinity);
     console.log({max, best: JSON.stringify(options[optionsUtility.indexOf(max)])})
 });
