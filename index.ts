@@ -166,8 +166,7 @@ const parser = parse({delimiter: ',', columns: true}, function(err, data) {
     })
 
     console.log('Processing options...')
-    // const options = cartesianProduct(Object.values(grupos).map((g) => g.opciones));
-    const options = cartesianProduct(Object.values(grupos).map((g) => g.opciones.slice(0, 3)));
+    const options = cartesianProduct(Object.values(grupos).map((g) => g.opciones));
     const bar1 = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic);
     bar1.start(options.length, 0);
     const optionsUtility = options.map((o: MateriaOpcion[], index: number) => {
@@ -175,9 +174,11 @@ const parser = parse({delimiter: ',', columns: true}, function(err, data) {
         return utilidad(o);
     });
     bar1.stop();
-    const max = optionsUtility.reduce((val: number, val2: number) => Math.max(val, val2), -Infinity);
-    const best = options[optionsUtility.indexOf(max)];
-    createCalendarForOption(best, (result) => console.log(result))
+    options.forEach((o, index: number) => o.utility = optionsUtility[index])
+    options.sort((o1, o2) => o1.utility - o2.utility);
+    options.slice(0, 10).forEach((option, order: number) => {
+        createCalendarForOption(option, (result) => fs.writeFileSync(`opcion${order}.ics`, result));
+    });
 });
 const inputFile = 'oferta.csv';
 fs.createReadStream(inputFile).pipe(parser);
