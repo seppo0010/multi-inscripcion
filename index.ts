@@ -175,7 +175,7 @@ const parser = parse({delimiter: ',', columns: true}, function(err, data) {
     });
     bar1.stop();
     options.forEach((o, index: number) => o.utility = optionsUtility[index])
-    options.sort((o1, o2) => o1.utility - o2.utility);
+    options.sort((o1, o2) => - (o1.utility - o2.utility));
     options.slice(0, 10).forEach((option, order: number) => {
         createCalendarForOption(option, (result) => fs.writeFileSync(`opcion${order}.ics`, result));
     });
