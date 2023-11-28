@@ -39,7 +39,7 @@ interface Grupos {
     opciones: MateriaOpcion[];
 }
 
-const commutePenalty = 3;
+const commutePenalty = 30;
 
 function hasOverlap(clases: Clase[]): boolean {
     return clases.slice(0, -1).some((c1: Clase, index: number) =>
@@ -120,8 +120,8 @@ function getLocation(l: ClaseLocation): string {
 
 function createCalendarForOption(materias: MateriaOpcion[], callback: (value: string) => void) {
     const events = materias.flatMap((m: MateriaOpcion) => m.cursada.map((c: Clase) => ({
-      start: [2024, 3, 4 + c.dow as number, Math.floor(c.startHour), (c.startHour - Math.floor(c.startHour)) * 60] as [number, number, number, number, number],
-      end: [2024, 3, 4 + c.dow as number, Math.floor(c.endHour), (c.endHour - Math.floor(c.endHour)) * 60] as [number, number, number, number, number],
+      start: [2024, 3, 4 + c.dow as number, Math.floor(c.startHour)-3, (c.startHour - Math.floor(c.startHour)) * 60] as [number, number, number, number, number],
+      end: [2024, 3, 4 + c.dow as number, Math.floor(c.endHour)-3, (c.endHour - Math.floor(c.endHour)) * 60] as [number, number, number, number, number],
       title: `${m.id} (${getLocation(c.location)})`,
       description: '',
       status: 'CONFIRMED' as 'CONFIRMED',
@@ -131,7 +131,7 @@ function createCalendarForOption(materias: MateriaOpcion[], callback: (value: st
         interval: 1,
         wkst: c.dow as number,
         byweekday: c.dow as number,
-        dtstart: datetime(2024, 3, 4 + c.dow as number, Math.floor(c.startHour), (c.startHour - Math.floor(c.startHour)) * 60),
+        dtstart: datetime(2024, 3, 4 + c.dow as number, Math.floor(c.startHour)-3, (c.startHour - Math.floor(c.startHour)) * 60),
         count: 17,
       }).toText(),
     })));
