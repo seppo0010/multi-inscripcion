@@ -39,7 +39,7 @@ interface Grupos {
     opciones: MateriaOpcion[];
 }
 
-const commutePenalty = 30;
+const commutePenalty = 0.8;
 
 function hasOverlap(clases: Clase[]): boolean {
     return clases.slice(0, -1).some((c1: Clase, index: number) =>
