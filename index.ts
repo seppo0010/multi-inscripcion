@@ -1,6 +1,7 @@
 import * as fs from 'fs';
 import { sequence } from 'ramda';
 import { parse } from 'csv-parse';
+import { createArrayCsvWriter } from 'csv-writer'
 import cliProgress from 'cli-progress';
 import * as ics from 'ics';
 import { datetime, RRule } from 'rrule'
@@ -39,18 +40,21 @@ interface Grupos {
     opciones: MateriaOpcion[];
 }
 
-const commutePenalty = 0.8;
+const commutePenalty = 1.2;
 
 function hasOverlap(clases: Clase[]): boolean {
     return clases.slice(0, -1).some((c1: Clase, index: number) =>
-        c1.endHour > clases[index+1].startHour)
+        c1.endHour > clases[index+1].startHour) || clases.slice(0, -1).some((c1: Clase, index: number) =>
+        c1.endHour === clases[index+1].startHour && c1.location !== clases[index+1].location)
 }
 
 function countCommutes(clases: Clase[]): number {
     const presencial = clases.filter((c: Clase) => c.location !== ClaseLocation.Remoto)
     return presencial.length - presencial.slice(0, -1).filter((c1: Clase, index: number) =>
         c1.endHour === presencial[index+1].startHour && c1.location === presencial[index+1].location
-        ).length
+        ).length - presencial.slice(0, -1).filter((c1: Clase, index: number) =>
+        presencial[index+1].startHour - c1.endHour < 2  && c1.location !== presencial[index+1].location // cambio de sede pero cercano en el tiempo
+        ).length * 0.5
 }
 
 function utilidad(materias: MateriaOpcion[]): number {
@@ -120,8 +124,8 @@ function getLocation(l: ClaseLocation): string {
 
 function createCalendarForOption(materias: MateriaOpcion[], callback: (value: string) => void) {
     const events = materias.flatMap((m: MateriaOpcion) => m.cursada.map((c: Clase) => ({
-      start: [2024, 3, 4 + c.dow as number, Math.floor(c.startHour)-3, (c.startHour - Math.floor(c.startHour)) * 60] as [number, number, number, number, number],
-      end: [2024, 3, 4 + c.dow as number, Math.floor(c.endHour)-3, (c.endHour - Math.floor(c.endHour)) * 60] as [number, number, number, number, number],
+      start: [2024, 5, 13 + c.dow as number, Math.floor(c.startHour)-3, (c.startHour - Math.floor(c.startHour)) * 60] as [number, number, number, number, number],
+      end: [2024, 5, 13 + c.dow as number, Math.floor(c.endHour)-3, (c.endHour - Math.floor(c.endHour)) * 60] as [number, number, number, number, number],
       title: `${m.id} (${getLocation(c.location)})`,
       description: '',
       status: 'CONFIRMED' as 'CONFIRMED',
@@ -176,9 +180,14 @@ const parser = parse({delimiter: ',', columns: true}, function(err, data) {
     bar1.stop();
     options.forEach((o, index: number) => o.utility = optionsUtility[index])
     options.sort((o1, o2) => - (o1.utility - o2.utility));
-    options.slice(0, 10).forEach((option, order: number) => {
+    options.slice(0, 20).forEach((option, order: number) => {
         createCalendarForOption(option, (result) => fs.writeFileSync(`opcion${order}.ics`, result));
     });
+    const csvWriter = createArrayCsvWriter({
+      path: 'options.csv',
+      header: ['utility', 'combinaciones'],
+    })
+    csvWriter.writeRecords(options.map((o) => [o.utility, o.map((x) => x.id).join(',')]))
 });
 const inputFile = 'oferta.csv';
 fs.createReadStream(inputFile).pipe(parser);
