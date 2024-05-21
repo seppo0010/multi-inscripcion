@@ -6,6 +6,7 @@ import cliProgress from 'cli-progress';
 import * as ics from 'ics';
 import { datetime, RRule } from 'rrule'
 
+const BASE_DATE = [2024, 5, 20];
 const cartesianProduct = sequence(Array.of)
 
 enum DayOfTheWeek {
@@ -40,7 +41,7 @@ interface Grupos {
     opciones: MateriaOpcion[];
 }
 
-const commutePenalty = 1.2;
+const commutePenalty = 2.2;
 
 function hasOverlap(clases: Clase[]): boolean {
     return clases.slice(0, -1).some((c1: Clase, index: number) =>
@@ -124,8 +125,8 @@ function getLocation(l: ClaseLocation): string {
 
 function createCalendarForOption(materias: MateriaOpcion[], callback: (value: string) => void) {
     const events = materias.flatMap((m: MateriaOpcion) => m.cursada.map((c: Clase) => ({
-      start: [2024, 5, 13 + c.dow as number, Math.floor(c.startHour)-3, (c.startHour - Math.floor(c.startHour)) * 60] as [number, number, number, number, number],
-      end: [2024, 5, 13 + c.dow as number, Math.floor(c.endHour)-3, (c.endHour - Math.floor(c.endHour)) * 60] as [number, number, number, number, number],
+      start: [BASE_DATE[0], BASE_DATE[1], BASE_DATE[2] + c.dow as number, Math.floor(c.startHour)-3, (c.startHour - Math.floor(c.startHour)) * 60] as [number, number, number, number, number],
+      end: [BASE_DATE[0], BASE_DATE[1], BASE_DATE[2] + c.dow as number, Math.floor(c.endHour)-3, (c.endHour - Math.floor(c.endHour)) * 60] as [number, number, number, number, number],
       title: `${m.id} (${getLocation(c.location)})`,
       description: '',
       status: 'CONFIRMED' as 'CONFIRMED',
@@ -135,7 +136,7 @@ function createCalendarForOption(materias: MateriaOpcion[], callback: (value: st
         interval: 1,
         wkst: c.dow as number,
         byweekday: c.dow as number,
-        dtstart: datetime(2024, 3, 4 + c.dow as number, Math.floor(c.startHour)-3, (c.startHour - Math.floor(c.startHour)) * 60),
+        dtstart: datetime(BASE_DATE[0], BASE_DATE[1], BASE_DATE[2] + c.dow as number, Math.floor(c.startHour)-3, (c.startHour - Math.floor(c.startHour)) * 60),
         count: 17,
       }).toText(),
     })));
@@ -178,16 +179,11 @@ const parser = parse({delimiter: ',', columns: true}, function(err, data) {
         return utilidad(o);
     });
     bar1.stop();
-    options.forEach((o, index: number) => o.utility = optionsUtility[index])
+    options.forEach((o, index: number) => o.utility = isNaN(optionsUtility[index]) ? -Infinity : optionsUtility[index])
     options.sort((o1, o2) => - (o1.utility - o2.utility));
     options.slice(0, 20).forEach((option, order: number) => {
         createCalendarForOption(option, (result) => fs.writeFileSync(`opcion${order}.ics`, result));
     });
-    const csvWriter = createArrayCsvWriter({
-      path: 'options.csv',
-      header: ['utility', 'combinaciones'],
-    })
-    csvWriter.writeRecords(options.map((o) => [o.utility, o.map((x) => x.id).join(',')]))
 });
 const inputFile = 'oferta.csv';
 fs.createReadStream(inputFile).pipe(parser);
