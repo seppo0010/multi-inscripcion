@@ -1,7 +1,7 @@
 Materia,Docente,Días economicas,Horario economicas,Días online,Horario online,Días derecho,Horario derecho,Puntaje,Grupo
-AEyF,Di Pelino,,,,,Ma/Vi,18.5 a 20,10,7
-Justicia Digital,Pomar,,,,,Lu/Ju,18.5 a 20,10,8
-Administrativo,BALBÍN-MORENO,Lu/Ju,7 a 8.5,,,,,10,9
+AEyF,Di Pelino,,,,,Ma/Vi,18.5 a 20,10,0
+Justicia Digital,Pomar,,,,,Lu/Ju,18.5 a 20,10,0
+Administrativo,BALBÍN-MORENO,Lu/Ju,7 a 8.5,,,,,10,0
 Micro II,Pascuini,Ma/Vi/Sa,9 a 11,,,,,9,0
 Micro II,Aromi,Lu/Mi/Ju,11 a 13,,,,,6,0
 Micro II,Ruiz,Lu/Mi,13 a 15,Ju,13 a 15,,,6,0
@@ -17,44 +17,44 @@ Macro II,Pierri,Lu/Ju,19 a 21,Mi,19 a 21,,,9,0
 Macro II,D'Amato,Lu/Mi/Ju,9 a 11,,,,,9,0
 ESA,Vazquez,Mi,9 a 11,,,,,7,2
 ESA,Kennedy,Ma,11 a 13,,,,,4,2
-ESA,Fernandez,Vi,11 a 13,,,,,9,2
+ESA,Fernandez,Vi,11 a 13,,,,,10,2
 ESA,Gonzalez,Ju,17 a 19,,,,,6,2
 ESA,Nieto,Mi,17 a 19,,,,,9,2
-DIPr,NAJURIETA M-BRODSKY J.,,,Lu/Ju,20 a 21.5,,,10,4
-DIPr,NAJURIETA-ANTON PEREZ,,,,,Lu/Ju,8.5 a 10,9,4
-DIPr,NAJURIETA-CERDEIRA,,,,,Ma/Vi,20 a 21.5,7,4
-DIPr,NAJURIETA-IUD,,,Ma/Vi,18.5 a 20,,,10,4
-DIPr,NAJURIETA-PEREZ M.,,,,,Ma/Vi,20 a 21.5,8,4
-DIPr,NAJURIETA-RODRIGUEZ,,,,,Ma/Vi,8.5 a 10,6,4
-DIPr,NAJURIETA-RODRIGUEZ,,,Ma/Vi,18.5 a 20,,,6,4
-DIPr,NAJURIETA-RUBAJA N.,,,,,Ma/Vi,17 a 18.5,9.5,4
-DIPr,NAJURIETA-SCOTTI L.,,,,,Ma/Vi,14 a 15.5,8,4
-DIPr,NAJURIETA-SCOTTI L.,,,,,Ma/Vi,15.5 a 17,8,4
-DIPr,NOODT TAQUELA MARÍA,,,,,Lu/Ju,17 a 18.5,7,4
-DIPr,NOODT T-ARGERICH,,,Ma/Vi,15.5 a 17,,,0,4
-DIPr,NOODT T-GONZALEZ J.,,,Ma/Vi,21.5 a 23,,,5,4
-DIPr,NOODT T-GONZALEZ P.,,,,,Lu/Ju,18.5 a 20,7,4
-DIPr,NOODT T-GONZALEZ P.,,,,,Lu/Ju,20 a 21.5,7,4
-DIPr,NOODT T-ORDOÑEZ PENAGOS,,,,,Lu/Ju,15.5 a 17,6,4
-DIPr,NOODT T-PAREDES,,,,,Ma/Vi,10 a 11.5,7,4
-DIPr,NOODT T-PAREDES,,,,,Ma/Vi,11.5 a 13,7,4
-DIPr,NOODT T-VILLA,,,,,Lu/Ju,10 a 11.5,5,4
-DIPr,UZAL-ESPARZA,,,,,Lu/Ju,10 a 11.5,8,4
-DIPr,UZAL-LAJE R.,,,Ma/Vi,8.5 a 10,,,7,4
-DIPr,UZAL-LAJE R.,,,,,Sa,8.5 a 11.5,7,4
-DIPr,UZAL-MEDINA F.,,,,,Lu/Ju,8.5 a 10,8,4
-DIPr,UZAL-MEDINA F.,,,,,Lu/Ju,20 a 21.5,8,4
-DIPr,UZAL-RABINO,,,,,Mi,14 a 17,2,4
-DIPr,UZAL-UZAL,,,,,Lu/Ju,18.5 a 20,3,4
-DIPr,UZAL-UZAL,,,,,Lu/Ju,18.5 a 20,3,4
-DIPr,UZAL-ZACUR ANA B.,,,,,Lu/Ju,15.5 a 17,3,4
-DIPr,UZAL-ZACUR ANA B.,,,,,Ma/Vi,7 a 8.5,3,4
-DIPr,WEINBERG-BENEDIT,,,Lu/Ju,8.5 a 10,,,8,4
-DIPr,WEINBERG-BLANCO S.,,,,,Mi,18.5 a 21.5,8,4
-DIPr,WEINBERG-MARTINEZ A.,,,,,Mi,18.5 a 21.5,6,4
-DIPr,WEINBERG-MARTINEZ RUIZ,,,,,Lu/Ju,7 a 8.5,6,4
-DIPr,WEINBERG-QUARANTA C.,,,,,Ma/Vi,14 a 15.5,8,4
-DIPr,WEINBERG-SOTO,,,,,Mi,8.5 a 11.5,7,4
+DIPr,NAJURIETA M-BRODSKY J.,,,Lu/Ju,20 a 21.5,,,10,0
+DIPr,NAJURIETA-ANTON PEREZ,,,,,Lu/Ju,8.5 a 10,9,0
+DIPr,NAJURIETA-CERDEIRA,,,,,Ma/Vi,20 a 21.5,7,0
+DIPr,NAJURIETA-IUD,,,Ma/Vi,18.5 a 20,,,10,0
+DIPr,NAJURIETA-PEREZ M.,,,,,Ma/Vi,20 a 21.5,8,0
+DIPr,NAJURIETA-RODRIGUEZ,,,,,Ma/Vi,8.5 a 10,6,0
+DIPr,NAJURIETA-RODRIGUEZ,,,Ma/Vi,18.5 a 20,,,6,0
+DIPr,NAJURIETA-RUBAJA N.,,,,,Ma/Vi,17 a 18.5,9.5,0
+DIPr,NAJURIETA-SCOTTI L.,,,,,Ma/Vi,14 a 15.5,8,0
+DIPr,NAJURIETA-SCOTTI L.,,,,,Ma/Vi,15.5 a 17,8,0
+DIPr,NOODT TAQUELA MARÍA,,,,,Lu/Ju,17 a 18.5,7,0
+DIPr,NOODT T-ARGERICH,,,Ma/Vi,15.5 a 17,,,0,0
+DIPr,NOODT T-GONZALEZ J.,,,Ma/Vi,21.5 a 23,,,5,0
+DIPr,NOODT T-GONZALEZ P.,,,,,Lu/Ju,18.5 a 20,7,0
+DIPr,NOODT T-GONZALEZ P.,,,,,Lu/Ju,20 a 21.5,7,0
+DIPr,NOODT T-ORDOÑEZ PENAGOS,,,,,Lu/Ju,15.5 a 17,6,0
+DIPr,NOODT T-PAREDES,,,,,Ma/Vi,10 a 11.5,7,0
+DIPr,NOODT T-PAREDES,,,,,Ma/Vi,11.5 a 13,7,0
+DIPr,NOODT T-VILLA,,,,,Lu/Ju,10 a 11.5,5,0
+DIPr,UZAL-ESPARZA,,,,,Lu/Ju,10 a 11.5,8,0
+DIPr,UZAL-LAJE R.,,,Ma/Vi,8.5 a 10,,,7,0
+DIPr,UZAL-LAJE R.,,,,,Sa,8.5 a 11.5,7,0
+DIPr,UZAL-MEDINA F.,,,,,Lu/Ju,8.5 a 10,8,0
+DIPr,UZAL-MEDINA F.,,,,,Lu/Ju,20 a 21.5,8,0
+DIPr,UZAL-RABINO,,,,,Mi,14 a 17,2,0
+DIPr,UZAL-UZAL,,,,,Lu/Ju,18.5 a 20,3,0
+DIPr,UZAL-UZAL,,,,,Lu/Ju,18.5 a 20,3,0
+DIPr,UZAL-ZACUR ANA B.,,,,,Lu/Ju,15.5 a 17,3,0
+DIPr,UZAL-ZACUR ANA B.,,,,,Ma/Vi,7 a 8.5,3,0
+DIPr,WEINBERG-BENEDIT,,,Lu/Ju,8.5 a 10,,,8,0
+DIPr,WEINBERG-BLANCO S.,,,,,Mi,18.5 a 21.5,8,0
+DIPr,WEINBERG-MARTINEZ A.,,,,,Mi,18.5 a 21.5,6,0
+DIPr,WEINBERG-MARTINEZ RUIZ,,,,,Lu/Ju,7 a 8.5,6,0
+DIPr,WEINBERG-QUARANTA C.,,,,,Ma/Vi,14 a 15.5,8,0
+DIPr,WEINBERG-SOTO,,,,,Mi,8.5 a 11.5,7,0
 Tributario,ALVAREZ ECHAGÜE-BARBATO D.,,,,,Ma/Vi,7 a 8.5,8,5
 Tributario,ALVAREZ ECHAGÜE-BARBATO D.,,,,,Ma/Vi,8.5 a 10,8,5
 Tributario,ALVAREZ ECHAGÜE-DURRIEU,,,,,Mi,15.5 a 18.5,5,5

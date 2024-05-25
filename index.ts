@@ -41,6 +41,7 @@ interface Grupos {
     opciones: MateriaOpcion[];
 }
 
+const PENALTY_ONLINE = 10;
 const commutePenalty = 2.2;
 
 function hasOverlap(clases: Clase[]): boolean {
@@ -159,14 +160,15 @@ const parser = parse({delimiter: ',', columns: true}, function(err, data) {
     data.forEach((row: any) => {
         if (row.Grupo === '0') return;
         const cursada = [];
+	const online = parseCursada(row, 'Días online', 'Horario online', ClaseLocation.Remoto)
         cursada.push(...parseCursada(row, 'Días economicas', 'Horario economicas', ClaseLocation.Economicas));
-        cursada.push(...parseCursada(row, 'Días online', 'Horario online', ClaseLocation.Remoto));
+        cursada.push(...online);
         cursada.push(...parseCursada(row, 'Días derecho', 'Horario derecho', ClaseLocation.Derecho));
         if (!grupos[row.Grupo]) grupos[row.Grupo] = {opciones: []};
         grupos[row.Grupo].opciones.push({
             id: `${row.Materia} (${row.Docente})`,
             cursada,
-            puntuacion: parseFloat(row.Puntaje),
+            puntuacion: parseFloat(row.Puntaje) - online.length * PENALTY_ONLINE,
         })
     })
 
@@ -182,7 +184,7 @@ const parser = parse({delimiter: ',', columns: true}, function(err, data) {
     options.forEach((o, index: number) => o.utility = isNaN(optionsUtility[index]) ? -Infinity : optionsUtility[index])
     options.sort((o1, o2) => - (o1.utility - o2.utility));
     options.slice(0, 20).forEach((option, order: number) => {
-        createCalendarForOption(option, (result) => fs.writeFileSync(`opcion${order}.ics`, result));
+        createCalendarForOption(option, (result) => fs.writeFileSync(`opcion${order}.ics`, result, { 'encoding': 'latin1' }));
     });
 });
 const inputFile = 'oferta.csv';
